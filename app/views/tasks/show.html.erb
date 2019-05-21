@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="row flex-column col-8 mt-3">
+    <h1>
+      <%= @task.title %>
+    </h1>
+    <p>
+      <%= @task.details %>
+    </p>
+    <span>
+      <% if @task.completed %>
+      <p><i class="far fa-check-square"></i> This task is completed</p>
+      <% else %>
+      <p><i class="far fa-square"></i> This task is not completed yet</p>
+      <% end %>
+    </span>
+    <p></p>
+    <%= link_to "Back to list", tasks_path %>
+    <%= link_to "Edit this task", edit_path %>
+  </div>
+</div>
